@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(45deg, #27374D, #ECF8F9);
+}
+
+.container {
+    height: 255px;
+    width: 405px;
+}
+
+.container:hover>.card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    position: absolute;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.7);
+    backface-visibility: hidden;
+}
+
+.front {
+    background-image: url('./content/background-front.png');
+}
+
+.bank-name {
+    font-weight: 700;
+    font-size: larger;
+    margin: 20px 0 10px 25px;
+}
+
+.chip-visa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 25px;
+}
+
+.chip {
+    height: 40px;
+    width: 50px;
+}
+
+.visa {
+    height: 30px;
+}
+
+.number {
+    margin: 20px 25px;
+    font-family: 'Cutive Mono', monospace;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.dates-section {
+    font-size: small;
+    margin: 10px 25px;
+}
+
+.date {
+    font-family: 'Cutive Mono', monospace;
+    font-size: large;
+    font-weight: 800;
+}
+
+.holder {
+    margin: 10px 25px;
+    font-weight: bold;
+}
+
+.back {
+    background-image: url('./content/background-back.png');
+    transform: rotate(180deg);
+    transform: rotateY(180deg);
+}
+
+.back-head {
+    font-size: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 25px;
+}
+
+.black-strip {
+    background-color: black;
+    height: 50px;
+}
+
+.strip-cvv {
+    display: flex;
+    align-items: center;
+    margin: 10px 25px;
+}
+
+.strip {
+    width: 150px;
+    height: 30px;
+    background-color: white;
+}
+
+.strip-cvv p {
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.back-paras {
+    font-size: 7px;
+    margin: 10px 25px;
+    color: rgba(255, 255, 255, 0.8);
+}
